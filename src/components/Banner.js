@@ -52,7 +52,9 @@ const Banner = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                                    <h1>{`Hi I'm Ashley Davis `}<span className="wrap">{text}</span></h1>
+                                    <h1>{`Hi I'm Ashley Davis `}
+                                    <br />
+                                    <span className="wrap">{text}</span></h1>
                                     <a href="#about" className='dark-btn'>Enter Portfolio</a>
                                 </div>}
                         </TrackVisibility>

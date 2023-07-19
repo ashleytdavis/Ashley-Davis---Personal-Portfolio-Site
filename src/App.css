@@ -48,8 +48,15 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
+
+nav.navbar.container {
+  padding: 0px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 nav.navbar.scrolled {
-  padding: 0px 0;
+  padding: 5px 0;
   background-color: var(--dark-gray);
 }
 nav.navbar a.navbar-brand {
@@ -58,6 +65,7 @@ nav.navbar a.navbar-brand {
 
 nav.navbar a.navbar-brand b {
   color: white;
+  margin-right: 16px;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -208,25 +216,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+#basic-navbar-nav {
+  text-align: left;
+}
+
 
 /* Banner CSS */
 .banner {
   margin-top: 0;
   padding: 175px 0 100px 0;
-  background-color: var(--green);
+  background-image: url("assets/boston-skyline.png");
+  background-size: cover;
 }
-.banner .tagline {
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
-  margin-bottom: 16px;
-  display: inline-block;
-}
+
 .banner h1 {
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
@@ -248,6 +252,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 1.25rem 2.5rem;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
+
 
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
@@ -391,9 +396,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-slider .item img {
-  width: 50%;
+  width: 45%;
+}
+
+
+.circle-background {
+  background-color: var(--yellow);
+  border-radius: 50%;
   margin: 0 auto 15px auto;
 }
+
 
 
 
@@ -635,6 +647,7 @@ footer {
 .footer ul {
   display: inline;
   list-style: none;
+  padding: 0;
 }
 
 

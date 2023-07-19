@@ -6,7 +6,7 @@ import "react-multi-carousel/lib/styles.css"
 import javaIcon from "../assets/java-icon.png"
 import pythonIcon from "../assets/python-icon.png"
 import CplusplusIcon from "../assets/Cplusplus-icon.png"
-import htmlcssjsIcon from "../assets/html-css-js-icon.png"
+import frontEndIcon from "../assets/frontend-icon.png"
 
 
 const Skills = () => {
@@ -42,27 +42,24 @@ const Skills = () => {
                             <h3>Below are some of my skills, and I'm always seeking to learn more!</h3>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={javaIcon} alt="Java Icon" />
+                                    <img src={javaIcon} alt="Java Icon" className="circle-background" />
                                     <h5>Java</h5>
-                                    <p>I have over 3 years of software developement experience in Java creating games and various other applications, including blah blah blah </p>
+                                    <p></p>
                                 </div>
                                 <div className="item">
-                                    <img src={CplusplusIcon} alt="C++ Icon" />
+                                    <img src={CplusplusIcon} alt="C++ Icon" className="circle-background" />
                                     <h5>C++</h5>
-                                    <p>This past spring, I completed CS3520: Programming in C++ with a high A. The class entailed creating user friendly applications
-                                        and games using the various libraries offered by the language.
-                                    </p>
+                                    <p></p>
                                 </div>
                                 <div className="item">
-                                    <img src={pythonIcon} alt="Python Icon" />
+                                    <img src={pythonIcon} alt="Python Icon" className="circle-background" />
                                     <h5>Python</h5>
-                                    <p>Over the past three years, I've both privately tutored and taught for the Khoury College of Computer Science principles of data science and machine learning using Python.
-                                        I've also created few personal and academic projects using libraries such as Pygame,
-                                    </p>
+                                    <p></p>
                                 </div>
                                 <div className="item">
-                                    <img src={htmlcssjsIcon} alt="HTML/CSS/JS Icon" />
+                                    <img src={frontEndIcon} alt="HTML/CSS/JS Icon" className="circle-background" />
                                     <h5>HTML / CSS / JS</h5>
+                                    <p></p>
                                 </div>
                             </Carousel>
                         </div>

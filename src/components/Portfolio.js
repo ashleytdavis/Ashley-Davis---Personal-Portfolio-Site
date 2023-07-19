@@ -32,35 +32,6 @@ const Portfolio = () => {
             description: "CS2510 Project involving the replication of the popular game Flood-it",
             imageURL: project4Img,
             projectType: "Academic Project",
-        }, {
-            title: "Marble Solitaire",
-            description: "CS3500 Project involving the transformation and editing of images of only approved file types",
-            imageURL: project1Img,
-            projectType: "Academic Project",
-        },
-        {
-            title: "Photo Editor Application",
-            description: "CS3500 Project involving the transformation and editing of images of only approved file types",
-            imageURL: project1Img,
-            projectType: "Academic Project",
-        },
-        {
-            title: "Photo Editor Application",
-            description: "CS3500 Project involving the transformation and editing of images of only approved file types",
-            imageURL: project1Img,
-            projectType: "Academic Project",
-        },
-        {
-            title: "Photo Editor Application",
-            description: "CS3500 Project involving the transformation and editing of images of only approved file types",
-            imageURL: project1Img,
-            projectType: "Academic Project",
-        },
-        {
-            title: "Photo Editor Application",
-            description: "CS3500 Project involving the transformation and editing of images of only approved file types",
-            imageURL: project1Img,
-            projectType: "Academic Project",
         },
     ];
 
