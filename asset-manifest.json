@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/personal-portfolio/static/css/main.44764187.css",
+    "main.js": "/personal-portfolio/static/js/main.50352148.js",
+    "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
+    "static/media/project1Img.png": "/personal-portfolio/static/media/project1Img.c80c40e84ef04a0db4b6.png",
+    "static/media/headshot.png": "/personal-portfolio/static/media/headshot.bd00c82cc18deaa58433.png",
+    "static/media/selfie.jpg": "/personal-portfolio/static/media/selfie.346e6e75db69c26dab25.jpg",
+    "static/media/html-css-js-icon.png": "/personal-portfolio/static/media/html-css-js-icon.d2adcd77dfe137b8eb85.png",
+    "static/media/Cplusplus-icon.png": "/personal-portfolio/static/media/Cplusplus-icon.5185ce2f4c945505ee4f.png",
+    "static/media/resume.pdf": "/personal-portfolio/static/media/resume.580289d2cbaf2a647e4d.pdf",
+    "static/media/project2Img.png": "/personal-portfolio/static/media/project2Img.e719d567f5b57bead65d.png",
+    "static/media/python-icon.png": "/personal-portfolio/static/media/python-icon.6a5cbc319ab3ddf8ef92.png",
+    "static/media/java-icon.png": "/personal-portfolio/static/media/java-icon.ddf8676bd569fe01ab44.png",
+    "static/media/project3Img.png": "/personal-portfolio/static/media/project3Img.4dfeb9d9af78ee8bef3a.png",
+    "static/media/revicons.eot": "/personal-portfolio/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/personal-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/personal-portfolio/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/personal-portfolio/index.html",
+    "main.44764187.css.map": "/personal-portfolio/static/css/main.44764187.css.map",
+    "main.50352148.js.map": "/personal-portfolio/static/js/main.50352148.js.map",
+    "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44764187.css",
+    "static/js/main.50352148.js"
+  ]
+}
