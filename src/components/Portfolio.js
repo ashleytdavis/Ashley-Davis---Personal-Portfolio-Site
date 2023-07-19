@@ -1,6 +1,5 @@
 import { Row, Col, Container } from 'react-bootstrap';
 import ProjectCard from '../components/ProjectCard.js';
-import github from '../assets/github.png'
 import project1Img from '../assets/project1Img.png';
 import project2Img from '../assets/project2Img.png';
 import project3Img from '../assets/project3Img.png';
