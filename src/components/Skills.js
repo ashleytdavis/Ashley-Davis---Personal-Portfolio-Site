@@ -29,6 +29,10 @@ const Skills = () => {
         }
     };
 
+
+
+
+
     const skills = [
         {
             name: "Java",
@@ -36,19 +40,19 @@ const Skills = () => {
             info: "I have over 3 years of development experience in Java, creating various applications and games using libraries such as java swing and javalib.",
         },
         {
-            name: "C++",
-            icon: CplusplusIcon,
-            info: "I have completed various academic projects using C++, using popular game libraries such as ncurses, and intend to use my freetime to continue pursing personal projects using this language.",
-        },
-        {
             name: "Python",
             icon: pythonIcon,
             info: "From spending time as a private data science tutor, to currently serving as a teaching assistant for Khoury College, I use my 4 years of experience in Python to teach undergraduates the fundamentals of data science and machine learning using fundamental libraries such as NumPy, Matplotlib, and Pandas.",
         },
         {
+            name: "C++",
+            icon: CplusplusIcon,
+            info: "I have completed various academic projects using C++, using popular game libraries such as ncurses, and intend to use my freetime to continue pursing personal projects using this language.",
+        },
+        {
             name: "HTML / CSS / JS",
             icon: frontEndIcon,
-            info: "Libraries: react, frameworks: bootstrap",
+            info: "I have been developing my front end skills over the last year through personal projects and by becoming a developer for Oasis at Northeastern. I have made myself very familiar with libraries such as react and frameworks such as bootstrap.",
         },
     ];
 

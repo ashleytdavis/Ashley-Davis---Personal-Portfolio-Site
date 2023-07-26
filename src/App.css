@@ -430,7 +430,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* Portfolio CSS */
 .portfolio {
-  padding: 120px 0;
+  padding: 120px 0 100px 0;
   position: relative;
   background-color: var(--off-white);
 }
@@ -520,8 +520,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .visit-github h1 {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 90px;
+  padding-bottom: 25px;
 }
 
 .visit-github a {

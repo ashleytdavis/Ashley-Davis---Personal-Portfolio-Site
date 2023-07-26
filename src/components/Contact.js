@@ -66,7 +66,6 @@ const Contact = () => {
                     </Row>
                     <Row className="mt-5">
                         <Col lg={12}>
-
                             <form onSubmit={handleSubmit}>
                                 <Row>
                                     <Col md={6} className="px-1">
