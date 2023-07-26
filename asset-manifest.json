@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.a0ca39dc.css",
-    "main.js": "/personal-portfolio/static/js/main.adcc9fe7.js",
+    "main.css": "/personal-portfolio/static/css/main.b9ce662b.css",
+    "main.js": "/personal-portfolio/static/js/main.7a899ad4.js",
     "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/photo-editor-app-gif.gif": "/personal-portfolio/static/media/photo-editor-app-gif.4e16b67112daa96db2a1.gif",
     "static/media/maze-solver-gif.gif": "/personal-portfolio/static/media/maze-solver-gif.ae36aeb206cf6880be15.gif",
@@ -20,12 +20,12 @@
     "static/media/revicons.ttf": "/personal-portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/personal-portfolio/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/personal-portfolio/index.html",
-    "main.a0ca39dc.css.map": "/personal-portfolio/static/css/main.a0ca39dc.css.map",
-    "main.adcc9fe7.js.map": "/personal-portfolio/static/js/main.adcc9fe7.js.map",
+    "main.b9ce662b.css.map": "/personal-portfolio/static/css/main.b9ce662b.css.map",
+    "main.7a899ad4.js.map": "/personal-portfolio/static/js/main.7a899ad4.js.map",
     "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0ca39dc.css",
-    "static/js/main.adcc9fe7.js"
+    "static/css/main.b9ce662b.css",
+    "static/js/main.7a899ad4.js"
   ]
 }
