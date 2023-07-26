@@ -665,7 +665,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact-methods a {
   color: var(--off-white);
-  text-decoration: none;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
+
+.contact-methods span {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .contact-methods a:hover {

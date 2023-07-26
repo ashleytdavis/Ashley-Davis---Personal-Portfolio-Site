@@ -49,17 +49,20 @@ const Contact = () => {
                 <Row className="align-items-center contact-box">
                     <Row>
                         <Col lg={12} className="text-center">
-                            <h5 className="contact-methods">
+                            <div className="contact-methods">
                                 <h2>Contact Me</h2>
-                                Email:
-                                <a href="davis.ash@northeastern.edu"> davis.ash@northeastern.edu </a>
-                                ||
-                                <a href="ashley921davis@gmail.com"> ashley921davis@gmail.com </a>
-                            </h5>
-                            <h5 className="contact-methods">
-                                Phone:
-                                <a href="tel:9738977712"> 973-897-7712</a>
-                            </h5>
+                                <span>Email:
+                                    <a href="davis.ash@northeastern.edu"> davis.ash@northeastern.edu </a>
+                                    ||
+                                    <a href="ashley921davis@gmail.com"> ashley921davis@gmail.com </a>
+                                </span>
+                            </div>
+                            <div className="contact-methods">
+                                <span>
+                                    Phone:
+                                    <a href="tel:9738977712"> 973-897-7712</a>
+                                </span>
+                            </div>
                             <br />
                             <h5>... or use the following form!</h5>
                         </Col>
