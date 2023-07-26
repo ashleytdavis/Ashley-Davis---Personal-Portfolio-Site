@@ -29,7 +29,28 @@ const Skills = () => {
         }
     };
 
-
+    const skills = [
+        {
+            name: "Java",
+            icon: javaIcon,
+            info: "I have over 3 years of development experience in Java, creating various applications and games using libraries such as java swing and javalib.",
+        },
+        {
+            name: "C++",
+            icon: CplusplusIcon,
+            info: "I have completed various academic projects using C++, using popular game libraries such as ncurses, and intend to use my freetime to continue pursing personal projects using this language.",
+        },
+        {
+            name: "Python",
+            icon: pythonIcon,
+            info: "From spending time as a private data science tutor, to currently serving as a teaching assistant for Khoury College, I use my 4 years of experience in Python to teach undergraduates the fundamentals of data science and machine learning using fundamental libraries such as NumPy, Matplotlib, and Pandas.",
+        },
+        {
+            name: "HTML / CSS / JS",
+            icon: frontEndIcon,
+            info: "Libraries: react, frameworks: bootstrap",
+        },
+    ];
 
 
     return (
@@ -41,26 +62,17 @@ const Skills = () => {
                             <h2>Skills</h2>
                             <h3>Below are some of my skills, and I'm always seeking to learn more!</h3>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
-                                <div className="item">
-                                    <img src={javaIcon} alt="Java Icon" className="circle-background" />
-                                    <h5>Java</h5>
-                                    <p></p>
-                                </div>
-                                <div className="item">
-                                    <img src={CplusplusIcon} alt="C++ Icon" className="circle-background" />
-                                    <h5>C++</h5>
-                                    <p></p>
-                                </div>
-                                <div className="item">
-                                    <img src={pythonIcon} alt="Python Icon" className="circle-background" />
-                                    <h5>Python</h5>
-                                    <p></p>
-                                </div>
-                                <div className="item">
-                                    <img src={frontEndIcon} alt="HTML/CSS/JS Icon" className="circle-background" />
-                                    <h5>HTML / CSS / JS</h5>
-                                    <p></p>
-                                </div>
+                                {
+                                    skills.map(skill => {
+                                        return (
+                                            <div className="item">
+                                                <img src={skill.icon} alt="Icon" className="circle-background" />
+                                                <h5>{skill.name}</h5>
+                                                <p>{skill.info}</p>
+                                            </div>
+                                        );
+                                    })
+                                }
                             </Carousel>
                         </div>
                     </Col>

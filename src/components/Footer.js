@@ -13,11 +13,13 @@ const Footer = () => {
                         <p>Copyright © Ashley Davis 2023</p>
                     </Col>
                     <Col md={4}>
-                        <div className='social-icon large-icon'>
-                            <a href="https://github.com/ashleytdavis" target="_blank" rel="noreferrer"><img src={github} alt="github icon" /></a>
-                            <a href="https://www.linkedin.com/in/ashleytdavis/" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
-                            <a href="https://twitter.com/ashleydavis921" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter icon" /></a>
-                        </div>
+                        <Row className='align-items-center'>
+                            <div className='social-icon large-icon'>
+                                <a href="https://github.com/ashleytdavis" target="_blank" rel="noreferrer"><img src={github} alt="github icon" /></a>
+                                <a href="https://www.linkedin.com/in/ashleytdavis/" target="_blank" rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
+                                <a href="https://twitter.com/ashleydavis921" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter icon" /></a>
+                            </div>
+                        </Row>
                     </Col>
                     <Col md={4} >
                         <ul>
