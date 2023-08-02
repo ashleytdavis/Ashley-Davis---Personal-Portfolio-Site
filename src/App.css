@@ -2,7 +2,6 @@
   --green: #76968a;
   --cream: #F5F1E6;
   --light-blue: #62A0B8;
-  --dark-blue: #2b7DA9;
   --gray: #343a40;
   --light-gray: #edeeef;
   --dark-gray: #212529;
@@ -239,8 +238,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Banner CSS */
 .banner {
   margin-top: 0;
-  padding: 150px 0 100px 0;
-  background-color: var(--dark-blue);
+  padding: 140px 0 100px 0;
+  background-color: var(--green);
 }
 
 .banner h1 {
@@ -254,6 +253,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner h2 {
   font-size: 25px;
+  margin-bottom: 2.5rem;
   font-style: italic;
 } 
 
@@ -302,7 +302,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 16px;
   font-size: 1.25rem;
 }
-
 
 .about-me-text > p {
   line-height: 1.6;
@@ -679,6 +678,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
+#hidden_iframe {
+  display: none;
+}
+
 
 
 /* Footer CSS */
@@ -719,6 +722,10 @@ footer {
   display: inline;
   list-style: none;
   padding: 0;
+}
+
+.footer p {
+  padding-top: 5px;
 }
 
 

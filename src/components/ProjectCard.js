@@ -6,6 +6,14 @@ const ProjectCard = ({ title, description, imageURL, projectType, longDescriptio
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true)
 
+    function project_availability(projectType) {
+        if (projectType === 'Academic Project') {
+            // 
+            return <span>As per Northeastern University guidelines, all code for academic projects cannot be publically posted. To view the code for this project, fill out my contact form at the bottom of this site!</span>
+        }
+        return <span>View this project on github: <a href={github_link} target="_blank" rel="noreferrer">{github_link}</a></span>;
+    }
+
     return (
         <>
             <Col sm={12} md={12} lg={4} className='no-gutters' onClick={handleShow}>
@@ -29,7 +37,7 @@ const ProjectCard = ({ title, description, imageURL, projectType, longDescriptio
                             <Col sm={12} md={12} lg={12}className="modal-gif">
                                 <img src={project_gif} alt="project clip"/>
                             </Col>
-                            <span>View this project on github: <a href={github_link} target="_blank" rel="noreferrer">{github_link}</a></span>
+                            {project_availability(projectType)}
                         </Row>
                     </Container>
                     <Button variant="secondary" onClick={handleClose} className="dark-btn">

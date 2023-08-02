@@ -1,47 +1,15 @@
-import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import $ from 'jquery';
 
 
 const Contact = () => {
-    const formInitialDetails = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        message: ''
-    }
-
-    const [formDetails, setFormDetails] = useState(formInitialDetails);
-    const [buttonText, setButtonText] = useState('Send Message');
-    const [status, setStatus] = useState({});
-
-    const onFormUpdate = (category, value) => {
-        setFormDetails({
-            ...formDetails,
-            [category]: value
+    var submitted = false;
+    if (submitted) {
+        $('#gform').on('submit', function (e) {
+            $('#gform *').fadeOut(2000);
+            $('#gform').prepend('Your submission has been processed...');
         })
     }
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setButtonText('Sending...');
-        let response = await fetch("http://localhost:5000/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json;charset=utf-8"
-            },
-            body: JSON.stringify(formDetails),
-        });
-        setButtonText("Send");
-        let result = response.json();
-        setFormDetails(formInitialDetails);
-        if (result.code === 200) {
-            setStatus({ success: true, message: "Message sent successfully" });
-        } else {
-            setStatus({ success: false, message: "Something went wrong, please try again later." })
-        }
-    };
-
-
 
     return (
         <section className="contact" id="contact">
@@ -69,30 +37,25 @@ const Contact = () => {
                     </Row>
                     <Row className="mt-5">
                         <Col lg={12}>
-                            <form onSubmit={handleSubmit}>
+                            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse?" target="hidden_iframe" onSubmit={submitted = true}>
                                 <Row>
                                     <Col md={6} className="px-1">
-                                        <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
-                                        <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} />
-                                        <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
+                                        <input type="text" placeholder="Name" name="entry.1970272624" id="entry.1970272624" />
+                                        <input type="text" placeholder="Email Address" name="entry.581725335" id="entry.581725335" />
+                                        <input type="email" placeholder="Phone Number" name="entry.202082344" id="entry.202082344" />
                                     </Col>
                                     <Col md={6}>
-                                        <textarea row="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} />
+                                        <textarea row="6" placeholder="Message" name="entry.168425920" id="entry.168425920" />
                                     </Col>
                                 </Row>
                             </form>
                         </Col>
                         <Col lg={12} className="align-items-center">
-                            <button type="submit"><span>{buttonText}</span></button>
+                            <button type="submit" onClick={submitted = true}><span>Send Message</span></button>
                         </Col>
+                        <iframe title="Contact Form" name="hidden_iframe" id="hidden_iframe" onload={() => { if (submitted) { } }} />
                     </Row>
                 </Row>
-                {
-                    status.message &&
-                    <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                    </Col>
-                }
             </Container>
         </section>
     );

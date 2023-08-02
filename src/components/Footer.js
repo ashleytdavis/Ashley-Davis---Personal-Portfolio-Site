@@ -8,9 +8,10 @@ const Footer = () => {
     return (
         <footer className="footer">
             <Container>
-                <Row className="align-items-center">
+                <Row className="align-items-center copyright">
                     <Col md={4} >
                         <p>Copyright © Ashley Davis 2023</p>
+                        <p>Made with love (and react)</p>
                     </Col>
                     <Col md={4}>
                         <Row className='align-items-center'>

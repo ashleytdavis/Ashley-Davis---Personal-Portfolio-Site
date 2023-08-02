@@ -17,7 +17,10 @@ const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h1>Ashley Davis</h1>
                                     <h2>Teaching Assistant @ Khoury College - Computer Science and Math @ Northeastern</h2>
-                                    <a href="#about" className='dark-btn'>Enter Portfolio</a>
+                                    <div className='learn-more-buttons'>
+                                        <a href="#about">Enter Portfolio</a>
+                                    </div>
+
                                 </div>}
                         </TrackVisibility>
                     </Col>
