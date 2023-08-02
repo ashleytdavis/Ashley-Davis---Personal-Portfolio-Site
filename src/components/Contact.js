@@ -66,8 +66,8 @@ const Contact = () => {
                                 <Row>
                                     <Col md={6} className="px-1">
                                         <input type="text" placeholder="Name*" name="entry.1970272624" required />
-                                        <input type="text" placeholder="Email Address*" name="entry.202082344" required />
-                                        <input type="email" placeholder="Phone Number" name="entry.581725335" />
+                                        <input type="email" placeholder="Email Address*" name="entry.202082344" required />
+                                        <input type="tel" placeholder="Phone Number" name="entry.581725335" />
                                     </Col>
                                     <Col md={6}>
                                         <textarea row="6" placeholder="Message*" name="entry.168425920" required />
