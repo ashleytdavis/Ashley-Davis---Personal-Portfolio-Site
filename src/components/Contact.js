@@ -10,7 +10,7 @@ const Contact = () => {
         var field4 = $("#Message").val();
 
         $.ajax({
-            url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
 
             data: {
                 "entry.1970272624": field1,
