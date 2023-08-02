@@ -55,13 +55,14 @@ const Contact = () => {
                         </Col>
                     </Row>
                     <Row className="mt-5">
-                        <Col lg={12}>
-                            {
-                                // GOOGLE FORM 
-                                /*<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                            */
-                            }
-                            <form id="contact_form" onsubmit={postToGoogle()}>
+                        <form id="contact_form" onsubmit={postToGoogle()}>
+                            <Col lg={12}>
+                                {
+                                    // GOOGLE FORM 
+                                    /*<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                                */
+                                }
+
                                 <Row>
                                     <Col md={6} className="px-1">
                                         <input type="text" placeholder="Name*" name="entry.1970272624" required />
@@ -72,15 +73,15 @@ const Contact = () => {
                                         <textarea row="6" placeholder="Message*" name="entry.168425920" required />
                                     </Col>
                                 </Row>
-                            </form>
-                        </Col>
-                        <Col lg={12} className="align-items-center">
-                            <button type="submit"><span>Send Message</span></button>
-                        </Col>
+                            </Col>
+                            <Col lg={12} className="align-items-center">
+                                <button type="submit"><span>Send Message</span></button>
+                            </Col>
+                        </form>
                     </Row>
                 </Row>
             </Container>
-        </section>
+        </section >
     );
 }
 
