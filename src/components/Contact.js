@@ -20,6 +20,11 @@ const Contact = () => {
             },
             type: "POST",
             dataType: "xml",
+            xhrFields: { withCredentials: true },
+            statusCode: {
+                0: function () { console.log("OK") },
+                200: function () { console.log("error") },
+            },
             success: function (d) {
                 $('#contact_form').trigger('reset');
             },
