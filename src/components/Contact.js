@@ -11,12 +11,12 @@ const Contact = () => {
         var field4 = $("#Message").val();
 
         $.ajax({
-            //beforeSend: function (xhr) {
-            //   xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
-            //  xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
-            //},
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
+                xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
+            },
             cache: false,
-            url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg",
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
             data: {
                 "entry.1970272624": field1,
                 "entry.581725335": field2,
@@ -73,17 +73,26 @@ const Contact = () => {
                             <h5>... or use the following form!</h5>
                         </Col>
                     </Row>
+
+
+
+
+
+
+
+
+
                     <Row className="mt-5">
-                        <form id="contact_form" onsubmit={postToGoogle()}>
+                        <form id="contact_form" onSubmit={postToGoogle()}>
                             <Col lg={12}>
                                 <Row>
                                     <Col md={6} className="px-1">
-                                        <input data-name="Name" id="Name" type="text" placeholder="Name*" name="entry.1970272624" required />
-                                        <input data-name="Email" id="Email" type="email" placeholder="Email Address*" name="entry.581725335" required />
-                                        <input data-name="Phone" id="Phone" type="tel" placeholder="Phone Number" name="entry.202082344" />
+                                        <input id="Name" type="text" placeholder="Name*" name="entry.1970272624" value="" required />
+                                        <input id="Email" type="email" placeholder="Email Address*" name="entry.581725335" value="" required />
+                                        <input id="Phone" type="tel" placeholder="Phone Number" name="entry.202082344" value="" />
                                     </Col>
                                     <Col md={6}>
-                                        <textarea data-name="Message" id="Message" row="6" placeholder="Message*" name="entry.168425920" required />
+                                        <textarea id="Message" row="6" placeholder="Message*" name="entry.168425920" value="" required />
                                     </Col>
                                 </Row>
                             </Col>
