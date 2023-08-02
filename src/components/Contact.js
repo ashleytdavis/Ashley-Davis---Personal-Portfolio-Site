@@ -3,12 +3,31 @@ import $ from 'jquery';
 
 
 const Contact = () => {
-    var submitted = false;
-    if (submitted) {
-        $('#gform').on('submit', function (e) {
-            $('#gform *').fadeOut(2000);
-            $('#gform').prepend('Your submission has been processed...');
-        })
+    function postToGoogle() {
+        var field1 = $("#Name").val();
+        var field2 = $("#Email").val();
+        var field3 = $("#Phone").val();
+        var field4 = $("#Message").val();
+
+        $.ajax({
+            url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
+
+            data: {
+                "entry.1970272624": field1,
+                "entry.202082344": field2,
+                "entry.581725335": field3,
+                "entry.168425920": field4
+            },
+            type: "POST",
+            dataType: "xml",
+            success: function (d) {
+                $('#contact_form').trigger('reset');
+            },
+            error: function (x, y, z) {
+                $('#contact_form').trigger('reset');
+            }
+        });
+        return false;
     }
 
     return (
@@ -37,23 +56,27 @@ const Contact = () => {
                     </Row>
                     <Row className="mt-5">
                         <Col lg={12}>
-                            <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse?" target="hidden_iframe" onSubmit={submitted = true}>
+                            {
+                                // GOOGLE FORM 
+                                /*<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                            */
+                            }
+                            <form id="contact_form" onsubmit={postToGoogle()}>
                                 <Row>
                                     <Col md={6} className="px-1">
-                                        <input type="text" placeholder="Name" name="entry.1970272624" id="entry.1970272624" />
-                                        <input type="text" placeholder="Email Address" name="entry.581725335" id="entry.581725335" />
-                                        <input type="email" placeholder="Phone Number" name="entry.202082344" id="entry.202082344" />
+                                        <input type="text" placeholder="Name*" name="entry.1970272624" required />
+                                        <input type="text" placeholder="Email Address*" name="entry.202082344" required />
+                                        <input type="email" placeholder="Phone Number" name="entry.581725335" />
                                     </Col>
                                     <Col md={6}>
-                                        <textarea row="6" placeholder="Message" name="entry.168425920" id="entry.168425920" />
+                                        <textarea row="6" placeholder="Message*" name="entry.168425920" required />
                                     </Col>
                                 </Row>
                             </form>
                         </Col>
                         <Col lg={12} className="align-items-center">
-                            <button type="submit" onClick={() => {submitted = true}}><span>Send Message</span></button>
+                            <button type="submit"><span>Send Message</span></button>
                         </Col>
-                        <iframe title="Contact Form" name="hidden_iframe" id="hidden_iframe" onload={() => { if (submitted) { } }} />
                     </Row>
                 </Row>
             </Container>
