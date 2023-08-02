@@ -11,10 +11,11 @@ const Contact = () => {
         var field4 = $("#Message").val();
 
         $.ajax({
-            beforeSend: function (xhr) {
-                xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
-                xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
-            },
+            //beforeSend: function (xhr) {
+            //   xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
+            //  xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
+            //},
+            cache: false,
             url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg",
             data: {
                 "entry.1970272624": field1,
