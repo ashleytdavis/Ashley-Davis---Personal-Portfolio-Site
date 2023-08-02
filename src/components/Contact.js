@@ -4,14 +4,18 @@ import $ from 'jquery';
 
 const Contact = () => {
     function postToGoogle() {
+        // Retrieve input box values
         var field1 = $("#Name").val();
         var field2 = $("#Email").val();
         var field3 = $("#Phone").val();
         var field4 = $("#Message").val();
 
         $.ajax({
-            url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
-
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
+                xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
+            },
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg",
             data: {
                 "entry.1970272624": field1,
                 "entry.581725335": field2,
@@ -22,18 +26,26 @@ const Contact = () => {
             dataType: "xml",
             xhrFields: { withCredentials: true },
             statusCode: {
-                0: function () { console.log("OK") },
-                200: function () { console.log("error") },
+                0: function () {
+                    console.log("OK");
+                    return true;
+                },
+                200: function () {
+                    console.log("error");
+                    return false;
+                },
+                400: function () {
+                    console.log("error");
+                    return false;
+                },
             },
             success: function (d) {
                 $('#contact_form').trigger('reset');
             },
             error: function (x, y, z) {
                 $('#contact_form').trigger('reset');
-                console.log("Submission failed.")
             }
         });
-        return false;
     }
 
     return (
