@@ -14,8 +14,8 @@ const Contact = () => {
 
             data: {
                 "entry.1970272624": field1,
-                "entry.202082344": field2,
-                "entry.581725335": field3,
+                "entry.581725335": field2,
+                "entry.202082344": field3,
                 "entry.168425920": field4
             },
             type: "POST",
@@ -25,6 +25,7 @@ const Contact = () => {
             },
             error: function (x, y, z) {
                 $('#contact_form').trigger('reset');
+                console.log("Submission failed.")
             }
         });
         return false;
@@ -60,8 +61,8 @@ const Contact = () => {
                                 <Row>
                                     <Col md={6} className="px-1">
                                         <input id="Name" type="text" placeholder="Name*" name="entry.1970272624" required />
-                                        <input id="Email " type="email" placeholder="Email Address*" name="entry.202082344" required />
-                                        <input id="Phone " type="tel" placeholder="Phone Number" name="entry.581725335" />
+                                        <input id="Email" type="email" placeholder="Email Address*" name="entry.581725335" required />
+                                        <input id="Phone" type="tel" placeholder="Phone Number" name="entry.202082344" />
                                     </Col>
                                     <Col md={6}>
                                         <textarea id="Message" row="6" placeholder="Message*" name="entry.168425920" required />
