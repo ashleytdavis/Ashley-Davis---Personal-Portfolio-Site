@@ -60,12 +60,12 @@ const Contact = () => {
                             <Col lg={12}>
                                 <Row>
                                     <Col md={6} className="px-1">
-                                        <input id="Name" type="text" placeholder="Name*" name="entry.1970272624" required />
-                                        <input id="Email" type="email" placeholder="Email Address*" name="entry.581725335" required />
-                                        <input id="Phone" type="tel" placeholder="Phone Number" name="entry.202082344" />
+                                        <input data-name="Name" id="Name" type="text" placeholder="Name*" name="entry.1970272624" required />
+                                        <input data-name="Email" id="Email" type="email" placeholder="Email Address*" name="entry.581725335" required />
+                                        <input data-name="Phone" id="Phone" type="tel" placeholder="Phone Number" name="entry.202082344" />
                                     </Col>
                                     <Col md={6}>
-                                        <textarea id="Message" row="6" placeholder="Message*" name="entry.168425920" required />
+                                        <textarea data-name="Message" id="Message" row="6" placeholder="Message*" name="entry.168425920" required />
                                     </Col>
                                 </Row>
                             </Col>
