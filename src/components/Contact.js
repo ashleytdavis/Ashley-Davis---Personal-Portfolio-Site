@@ -51,7 +51,7 @@ const Contact = () => {
                             </form>
                         </Col>
                         <Col lg={12} className="align-items-center">
-                            <button type="submit" onClick={submitted = true}><span>Send Message</span></button>
+                            <button type="submit" onClick={() => {submitted = true}}><span>Send Message</span></button>
                         </Col>
                         <iframe title="Contact Form" name="hidden_iframe" id="hidden_iframe" onload={() => { if (submitted) { } }} />
                     </Row>
