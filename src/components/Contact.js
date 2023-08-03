@@ -1,17 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
-import $ from 'jquery';
 
 
 const Contact = () => {
-    // set the target on the form to point to a hidden iframe
-    // some browsers need the target set via JavaScript, no idea why...
-    //document.getElementById('contact_form').target = 'my-response-iframe';
-    // detect when the iframe reloads
     var iframe = document.getElementById('my-response-iframe');
     if (iframe) {
         iframe.onload = function () {
             console.log("success!");
-            $('#contact_form').trigger('reset');
+            window.location.reload(false);
         }
     }
 
