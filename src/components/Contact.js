@@ -5,9 +5,8 @@ const Contact = () => {
     var iframe = document.getElementById('my-response-iframe');
     if (iframe) {
         iframe.onload = function () {
-            console.log("success!");
-            window.location.reload(false);
         }
+        window.location.reload(false);
     }
 
     return (
