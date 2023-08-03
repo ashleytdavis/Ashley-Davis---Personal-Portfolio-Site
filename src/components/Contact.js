@@ -34,14 +34,6 @@ const Contact = () => {
                         </Col>
                     </Row>
 
-
-
-
-
-
-
-
-
                     <Row className="mt-5">
                         <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post">
                             <Col lg={12}>
@@ -57,9 +49,9 @@ const Contact = () => {
                                 </Row>
                             </Col>
                             <Col lg={12} className="align-items-center">
-                                <button type="submit" id="contact-submit"><span>Send Message</span></button>
+                                <button type="submit" className="contact_button">Send Message</button>
                             </Col>
-                            <iframe id="my-response-iframe" name="my-response-iframe"></iframe>
+                            <iframe id="my-response-iframe" title="my-response-iframe"></iframe>
                         </form>
                     </Row>
                 </Row>

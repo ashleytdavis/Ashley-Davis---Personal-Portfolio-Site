@@ -8,6 +8,9 @@ const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
+      if (window.innerWidth < 1140) {
+        setScrolled(true);
+      }
       if (window.scrollY > 150) {
         setScrolled(true);
       } else {
@@ -29,16 +32,14 @@ const NavBar = () => {
         <Navbar.Brand href="#home">
           <b>Ashley Davis</b>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className='navbar-toogler-icon'></span>
-        </Navbar.Toggle>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
             <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
             <Nav.Link href="#portfolio" className={activeLink === 'portfolio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('portfolio')}>Projects</Nav.Link>
             <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contact</Nav.Link>
-            <Nav.Link href={resume} target='_blank' className={activeLink === 'resume' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
+            <Nav.Link href={resume} target='_blank' className={activeLink === 'resume' ? 'active navbar-link resume' : 'navbar-link resume'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
