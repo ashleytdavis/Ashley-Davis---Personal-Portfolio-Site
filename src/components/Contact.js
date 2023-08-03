@@ -5,61 +5,16 @@ import $ from 'jquery';
 const Contact = () => {
     // set the target on the form to point to a hidden iframe
     // some browsers need the target set via JavaScript, no idea why...
-    document.getElementById('contact_form').target = 'my-response-iframe';
+    //document.getElementById('contact_form').target = 'my-response-iframe';
     // detect when the iframe reloads
     var iframe = document.getElementById('my-response-iframe');
     if (iframe) {
         iframe.onload = function () {
             console.log("success!");
+            $('#contact_form').trigger('reset');
         }
     }
-    /*
-     function postToGoogle() {
-         // Retrieve input box values
-         var field1 = $("#Name").val();
-         var field2 = $("#Email").val();
-         var field3 = $("#Phone").val();
-         var field4 = $("#Message").val();
- 
-         $.ajax({
-             beforeSend: function (xhr) {
-                 xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
-                 xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
-             },
-             cache: false,
-             url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
-             data: {
-                 "entry.1970272624": field1,
-                 "entry.581725335": field2,
-                 "entry.202082344": field3,
-                 "entry.168425920": field4
-             },
-             type: "POST",
-             dataType: "xml",
-             xhrFields: { withCredentials: true },
-             statusCode: {
-                 0: function () {
-                     console.log("OK");
-                     return true;
-                 },
-                 200: function () {
-                     console.log("error");
-                     return false;
-                 },
-                 400: function () {
-                     console.log("error");
-                     return false;
-                 },
-             },
-             success: function (d) {
-                 $('#contact_form').trigger('reset');
-             },
-             error: function (x, y, z) {
-                 $('#contact_form').trigger('reset');
-             }
-         });
-     }
-     */
+
     return (
         <section className="contact" id="contact">
             <Container>
