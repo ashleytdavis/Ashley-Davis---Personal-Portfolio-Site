@@ -3,52 +3,63 @@ import $ from 'jquery';
 
 
 const Contact = () => {
-    function postToGoogle() {
-        // Retrieve input box values
-        var field1 = $("#Name").val();
-        var field2 = $("#Email").val();
-        var field3 = $("#Phone").val();
-        var field4 = $("#Message").val();
-
-        $.ajax({
-            beforeSend: function (xhr) {
-                xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
-                xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
-            },
-            cache: false,
-            url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
-            data: {
-                "entry.1970272624": field1,
-                "entry.581725335": field2,
-                "entry.202082344": field3,
-                "entry.168425920": field4
-            },
-            type: "POST",
-            dataType: "xml",
-            xhrFields: { withCredentials: true },
-            statusCode: {
-                0: function () {
-                    console.log("OK");
-                    return true;
-                },
-                200: function () {
-                    console.log("error");
-                    return false;
-                },
-                400: function () {
-                    console.log("error");
-                    return false;
-                },
-            },
-            success: function (d) {
-                $('#contact_form').trigger('reset');
-            },
-            error: function (x, y, z) {
-                $('#contact_form').trigger('reset');
-            }
-        });
+    // set the target on the form to point to a hidden iframe
+    // some browsers need the target set via JavaScript, no idea why...
+    document.getElementById('contact_form').target = 'my-response-iframe';
+    // detect when the iframe reloads
+    var iframe = document.getElementById('my-response-iframe');
+    if (iframe) {
+        iframe.onload = function () {
+            console.log("success!");
+        }
     }
-
+    /*
+     function postToGoogle() {
+         // Retrieve input box values
+         var field1 = $("#Name").val();
+         var field2 = $("#Email").val();
+         var field3 = $("#Phone").val();
+         var field4 = $("#Message").val();
+ 
+         $.ajax({
+             beforeSend: function (xhr) {
+                 xhr.setRequestHeader('Access-Control-Allow-Origin', 'chrome-extension://EXTENSION_ID');
+                 xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
+             },
+             cache: false,
+             url: "https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse",
+             data: {
+                 "entry.1970272624": field1,
+                 "entry.581725335": field2,
+                 "entry.202082344": field3,
+                 "entry.168425920": field4
+             },
+             type: "POST",
+             dataType: "xml",
+             xhrFields: { withCredentials: true },
+             statusCode: {
+                 0: function () {
+                     console.log("OK");
+                     return true;
+                 },
+                 200: function () {
+                     console.log("error");
+                     return false;
+                 },
+                 400: function () {
+                     console.log("error");
+                     return false;
+                 },
+             },
+             success: function (d) {
+                 $('#contact_form').trigger('reset');
+             },
+             error: function (x, y, z) {
+                 $('#contact_form').trigger('reset');
+             }
+         });
+     }
+     */
     return (
         <section className="contact" id="contact">
             <Container>
@@ -83,12 +94,12 @@ const Contact = () => {
 
 
                     <Row className="mt-5">
-                        <form id="contact_form" onSubmit={postToGoogle()}>
+                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post">
                             <Col lg={12}>
                                 <Row>
                                     <Col md={6} className="px-1">
                                         <input id="Name" type="text" placeholder="Name*" name="entry.1970272624" required />
-                                        <input id="Email" type="email" placeholder="Email Address*" name="entry.581725335"  required />
+                                        <input id="Email" type="email" placeholder="Email Address*" name="entry.581725335" required />
                                         <input id="Phone" type="tel" placeholder="Phone Number" name="entry.202082344" />
                                     </Col>
                                     <Col md={6}>
@@ -99,6 +110,7 @@ const Contact = () => {
                             <Col lg={12} className="align-items-center">
                                 <button type="submit" id="contact-submit"><span>Send Message</span></button>
                             </Col>
+                            <iframe id="my-response-iframe" name="my-response-iframe"></iframe>
                         </form>
                     </Row>
                 </Row>

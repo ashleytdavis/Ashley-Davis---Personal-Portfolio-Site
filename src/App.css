@@ -678,9 +678,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 
-#hidden_iframe {
+#my-response-iframe {
   display: none;
+  visibility: hidden;
+  height: 1px;
 }
+
+
 
 
 
