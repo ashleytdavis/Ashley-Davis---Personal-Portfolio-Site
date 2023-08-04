@@ -9,6 +9,13 @@ const Contact = () => {
         window.location.reload(false);
     }
 
+    var target_popup = function(form) {
+        window.open('',//URL should be blank so that it will take form attributes.
+                    'UniqueWindowName', //window name
+                    'width=400,height=400,resizeable,scrollbars');
+        form.target = 'UniqueWindowName';
+    }
+
     return (
         <section className="contact" id="contact">
             <Container>
@@ -35,7 +42,7 @@ const Contact = () => {
                     </Row>
 
                     <Row className="mt-5">
-                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post">
+                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post" onSubmit={target_popup(this)}>
                             <Col lg={12}>
                                 <Row>
                                     <Col md={6} className="px-1">
