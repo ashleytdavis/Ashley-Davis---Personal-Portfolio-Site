@@ -1,19 +1,11 @@
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-
 const Contact = () => {
-    var iframe = document.getElementById('my-response-iframe');
-    if (iframe) {
-        iframe.onload = function () {
-        }
-        window.location.reload(false);
-    }
-
-    var target_popup = function(form) {
-        window.open('',//URL should be blank so that it will take form attributes.
-                    'UniqueWindowName', //window name
-                    'width=400,height=400,resizeable,scrollbars');
-        form.target = 'UniqueWindowName';
+    const [response_state, setResponse_state] = useState('');
+    const submit = () => {
+        setResponse_state(<p>Your response was succesfully sent!</p>);
+        document.getElementById("contact_form").reset();
     }
 
     return (
@@ -42,7 +34,7 @@ const Contact = () => {
                     </Row>
 
                     <Row className="mt-5">
-                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post" onSubmit={target_popup(this)}>
+                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post">
                             <Col lg={12}>
                                 <Row>
                                     <Col md={6} className="px-1">
@@ -55,10 +47,11 @@ const Contact = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col lg={12} className="align-items-center">
-                                <button type="submit" className="contact_button">Send Message</button>
+                            <Col lg={12} className="align-items-center submit-area">
+                                {response_state}
+                                <button type="submit" className="contact_button" onClick={submit}>Send Message</button>
                             </Col>
-                            <iframe id="my-response-iframe" title="my-response-iframe"></iframe>
+                            <iframe id="my-response-iframe" title="my-response-iframe" className="my-response-iframe" sandbox=""></iframe>
                         </form>
                     </Row>
                 </Row>

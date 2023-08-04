@@ -617,8 +617,8 @@ span.navbar-text {
   height: 1px;
 }
 
-.success-message p {
-  color: var(--green);
+.submit-area p {
+  color: var(--yellow) !important;
 }
 
 
