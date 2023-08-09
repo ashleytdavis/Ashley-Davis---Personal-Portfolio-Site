@@ -19,7 +19,7 @@ const Portfolio = () => {
             description: "CS3500 Project involving the transformation and editing of images of only approved file types",
             imageURL: project1Img,
             projectType: "Academic Project",
-            longDescription: "This project was a paired programming exercise for my CS3500 class: Object Oriented Design. The assignment entailed creating a layered photo editor application where users can (using java swing)",
+            longDescription: "This project was a paired programming exercise for my CS3500 class: Object Oriented Design. The assignment entailed creating a layered photo editor application where users can upload an image of an approved file type and apply filters or transformations to the photo (similar to that of photoshop). Users also have the option to export their image back to their files, open multiple projects at once, or undo any changes they may have made. This project was built in Java and utilizes the java swing GUI library.",
             github_link: "https://github.com/ashleytdavis/Photo-Editor-Application",
             project_gif: PhotoApp,
         },
