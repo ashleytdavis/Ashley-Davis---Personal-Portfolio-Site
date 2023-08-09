@@ -5,7 +5,6 @@ const Contact = () => {
     const [response_state, setResponse_state] = useState('');
     const submit = () => {
         setResponse_state(<p>Your response was succesfully sent!</p>);
-        document.getElementById("contact_form").reset();
     }
 
     return (
@@ -34,7 +33,7 @@ const Contact = () => {
                     </Row>
 
                     <Row className="mt-5">
-                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post">
+                        <form id="contact_form" target="my-response-iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSea1lWgJZcDfYdKVsCtBcssupLFMbkpxbJP7jTu-u_n4-UsHg/formResponse" method="post" onSubmit={submit}>
                             <Col lg={12}>
                                 <Row>
                                     <Col md={6} className="px-1">
@@ -49,9 +48,9 @@ const Contact = () => {
                             </Col>
                             <Col lg={12} className="align-items-center submit-area">
                                 {response_state}
-                                <button type="submit" className="contact_button" onClick={submit}>Send Message</button>
+                                <button type="submit" className="contact_button">Send Message</button>
                             </Col>
-                            <iframe id="my-response-iframe" title="my-response-iframe" className="my-response-iframe" sandbox=""></iframe>
+                            <iframe id="my-response-iframe" title="my-response-iframe" className="my-response-iframe"></iframe>
                         </form>
                     </Row>
                 </Row>
